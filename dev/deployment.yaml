@@ -16,4 +16,4 @@ spec:
       - name: myapp
         image: yahyatoumi/yahya-toumi-cicd-app:v1
         ports:
-        - containerPort: 8080
+        - containerPort: 80
