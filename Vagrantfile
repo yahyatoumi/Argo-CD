@@ -27,6 +27,8 @@ Vagrant.configure("2") do |config|
     ytoumiS.vm.hostname = "ytoumiS"
     ytoumiS.vm.network "private_network", ip: SERVER_IP
     ytoumiS.vm.network "forwarded_port", guest: 6443, host: 6443
+    ytoumiS.vm.synced_folder ".", "/home/vagrant/conf", create: true
+
 
 
     ytoumiS.vm.provision "shell", name: "setup-script", path: "setup-script.sh"
