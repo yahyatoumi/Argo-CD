@@ -5,6 +5,8 @@ metadata:
   namespace: myapp
   labels:
     name: myingress
+  annotations:
+    kubernetes.io/ingress.class: traefik 
 spec:
   rules:
   - host: myapp.com
