@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: wil42/playground:v1
+        image: https://github.com/yahyatoumi/Argo-CD.git
         resources:
           limits:
             memory: "128Mi"
