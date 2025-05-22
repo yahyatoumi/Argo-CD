@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: https://github.com/yahyatoumi/Argo-CD.git
+        image: yahyatoumi/yahya-toumi-cicd-app:v1
         resources:
           limits:
             memory: "128Mi"
