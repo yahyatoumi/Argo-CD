@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: ytoumi-playground
   namespace: dev
 spec:
   selector:
@@ -27,48 +27,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp
+  name: ytoumi-playground
 spec:
   selector:
     app: myapp
   ports:
   - port: 80
     targetPort: 80
-
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  labels:
-    app: nginx
-  name: nginx
-spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: nginx
-  template:
-    metadata:
-      labels:
-        app: nginx
-    spec:
-      containers:
-      - image: nginx
-        name: nginx
-
----
-
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app: nginx
-  name: nginx
-spec:
-  ports:
-  - port: 8888
-    protocol: TCP
-    targetPort: 8888
-  selector:
-    app: nginx
-  type: ClusterIP
