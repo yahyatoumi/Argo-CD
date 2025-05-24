@@ -27,7 +27,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp-service
+  name: ytoumi-playground
 spec:
   selector:
     app: myapp
