@@ -30,7 +30,6 @@ kind: Service
 metadata:
   name: ytoumi-playground
 spec:
-  type: LoadBalancer
   selector:
     app: myapp
   ports:
