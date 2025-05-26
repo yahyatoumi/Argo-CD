@@ -21,7 +21,6 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 80
-          hostPort: 8888 
 
 ---
 
@@ -36,5 +35,6 @@ spec:
   ports:
     - port: 8888
       targetPort: 80
-      nodePort: 30888
-  type: NodePort
+  type: LoadBalancer
+  externalIPs:
+    - 127.0.0.1 
