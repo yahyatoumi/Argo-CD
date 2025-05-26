@@ -21,7 +21,7 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 8888
+        - containerPort: 80
 
 ---
 
@@ -34,4 +34,4 @@ spec:
     app: myapp
   ports:
   - port: 8888
-    targetPort: 8888
+    targetPort: 80
