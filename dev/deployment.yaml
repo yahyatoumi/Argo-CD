@@ -4,6 +4,7 @@ metadata:
   name: ytoumi-playground
   namespace: dev
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: myapp
@@ -15,10 +16,10 @@ spec:
       containers:
       - name: myapp
         image: yahyatoumi/yahya-toumi-cicd-app:v1
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+        # resources:
+        #   limits:
+        #     memory: "128Mi"
+        #     cpu: "500m"
         ports:
         - containerPort: 8888
 
@@ -33,5 +34,6 @@ spec:
   selector:
     app: myapp
   ports:
-  - port: 8888
+  - protocol: TCP
+    port: 8888
     targetPort: 8888
