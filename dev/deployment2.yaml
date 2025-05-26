@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ytoumi2-app-deployment
+  labels:
+    app: ytoumi2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ytoumi2
+  template:
+    metadata:
+      labels:
+        app: ytoumi2
+    spec:
+      containers:
+      - name: ytoumi2
+        image: yahyatoumi/yahya-toumi-cicd-app:v1
+        ports:
+        - containerPort: 8888
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ytoumi2-app-service
+  labels:
+    app: ytoumi2
+spec:
+  type: LoadBalancer
+  selector:
+      app: ytoumi2
+  ports:
+    - protocol: TCP
+      port: 8888
+      targetPort: 8888
