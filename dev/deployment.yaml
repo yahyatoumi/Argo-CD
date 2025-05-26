@@ -16,10 +16,10 @@ spec:
       containers:
       - name: myapp
         image: yahyatoumi/yahya-toumi-cicd-app:v1
-        # resources:
-        #   limits:
-        #     memory: "128Mi"
-        #     cpu: "500m"
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
         ports:
         - containerPort: 8888
 
