@@ -20,7 +20,7 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 80
+        - containerPort: 8888
 
 ---
 
@@ -29,8 +29,9 @@ kind: Service
 metadata:
   name: ytoumi-playground
 spec:
+  type: LoadBalancer
   selector:
     app: myapp
   ports:
-  - port: 80
-    targetPort: 80
+  - port: 8888
+    targetPort: 8888
