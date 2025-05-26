@@ -28,11 +28,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: ytoumi-playground
+  namespace: dev
 spec:
   selector:
     app: myapp
   ports:
-    - port: 80
+    - port: 8888
       targetPort: 80
-      nodePort: 31888
+      nodePort: 30888
   type: NodePort
