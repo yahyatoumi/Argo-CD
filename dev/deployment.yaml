@@ -28,12 +28,30 @@ apiVersion: v1
 kind: Service
 metadata:
   name: ytoumi-playground
-  namespace: dev
 spec:
   selector:
     app: myapp
   ports:
-    - port: 80
-      targetPort: 80
-      nodePort: 30888
-  type: NodePort
+  - port: 80
+    targetPort: 80
+
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myingress
+  labels:
+    name: myingress
+spec:
+  rules:
+  - host: app1.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: ytoumi-playground
+            port: 
+              number: 80
