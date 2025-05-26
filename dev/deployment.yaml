@@ -21,7 +21,7 @@ spec:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 80
+        - containerPort: 8888
 
 ---
 
@@ -34,7 +34,4 @@ spec:
     app: myapp
   ports:
   - port: 8888
-    targetPort: 80
-  type: LoadBalancer
-  externalIPs:
-    - 127.0.0.1
+    targetPort: 8888
