@@ -48,6 +48,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  name: myingress
+  namespace: dev
+metadata:
   name: ytoumi-playground
 spec:
   selector:
