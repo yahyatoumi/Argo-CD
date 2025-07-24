@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: yahyatoumi/yahya-toumi-cicd-app:v2
+        image: wil42/playground:v2
         resources:
           limits:
             memory: "128Mi"
