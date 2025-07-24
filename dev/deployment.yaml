@@ -40,11 +40,14 @@ kind: Ingress
 metadata:
   name: myingress
   namespace: dev
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
   rules:
   - http:
       paths:
-      - path: "/"
+      - path: /
         pathType: Prefix
         backend:
           service:
