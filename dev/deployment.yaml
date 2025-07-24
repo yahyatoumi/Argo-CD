@@ -26,7 +26,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: ytoumi-playground
+  name: ytoumi-playground-service
   namespace: dev
 spec:
   selector:
@@ -49,6 +49,6 @@ spec:
         path: "/"
         backend:
           service:
-            name: app1-service
+            name: ytoumi-playground-service
             port: 
               number: 80
