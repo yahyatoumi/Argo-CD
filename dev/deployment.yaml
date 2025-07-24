@@ -42,12 +42,13 @@ metadata:
   namespace: dev
 spec:
   rules:
-  - http:
+  - host: app1.com
+    http:
       paths:
-      - path: "/"
-        pathType: Prefix
+      - pathType: Prefix
+        path: "/"
         backend:
           service:
-            name: ytoumi-playground
-            port:
+            name: app1-service
+            port: 
               number: 80
