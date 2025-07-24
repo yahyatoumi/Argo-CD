@@ -51,7 +51,7 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: Host(`app1.com`)
+    - match: Host(`*`)
       kind: Rule
       services:
         - name: ytoumi-playground-service
