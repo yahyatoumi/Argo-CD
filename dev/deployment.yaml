@@ -49,8 +49,8 @@ metadata:
     name: willapp-ingress
 spec:
   rules:
-  # - host: willapp.165.22.78.255.nip.io
-  - http:
+  - host: willapp.165.22.78.255.nip.io
+    http:
       paths:
       - pathType: Prefix
         path: "/"
