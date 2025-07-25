@@ -36,7 +36,7 @@ spec:
   selector:
     app: myapp
   ports:
-  - port: 80
+  - port: 8888
     targetPort: 8888
   type: ClusterIP
 ---
