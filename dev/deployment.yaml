@@ -49,7 +49,7 @@ metadata:
     name: willapp-ingress
 spec:
   rules:
-  - host: willapp.165.22.78.255.nip.io:8888
+  - host: willapp.165.22.78.255.nip.io
     http:
       paths:
       - pathType: Prefix
