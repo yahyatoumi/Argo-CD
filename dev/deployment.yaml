@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: wil42/playground:v2
+        image: wil42/playground:v1
         resources:
           limits:
             memory: "128Mi"
